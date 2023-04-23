@@ -1,0 +1,31 @@
+
+package pessoa;
+
+
+public class Gerente extends Empregado {
+    public String nomeGerencia;
+    public double valorInss;
+    
+    public Gerente(String nome, int idade, String sexo, double  salario, String matricula,String nomeGerencia){
+        super(nome,idade,sexo,salario,matricula);
+        this.nomeGerencia= nomeGerencia;
+        
+    }
+    public double valorInss(double salario, double valorInss){
+        valorInss = (salario * 11) / 100;
+        return valorInss;
+    }
+    
+    public String getNomeGerencia() {
+        return nomeGerencia;
+    }
+    public void setNomeGerencia(String  nomeGerencia) {
+        this.nomeGerencia = nomeGerencia;
+    }
+    
+    @Override
+    public String toString(){
+        return "\nNome: "+nome+ "\nIdade: "+idade+ "\nMatricula: "+matricula+ "\n Nome da gerencia: "+nomeGerencia+ "\n Valor INSS: " +valorInss;
+    }
+}
+
