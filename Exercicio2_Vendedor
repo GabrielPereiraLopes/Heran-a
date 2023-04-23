@@ -1,0 +1,33 @@
+
+package pessoa;
+
+
+public class Vendedor extends Empregado {
+    public int qntVendas;
+    public double valorVendas;
+    public Vendedor(String nome, int idade, String sexo, double  salario, String matricula,double valorVendas, int qntVendas){
+        super(nome,idade,sexo,salario,matricula);
+        this.qntVendas= qntVendas;
+        this.valorVendas = valorVendas;
+    }
+    
+    public int getQntVendas() {
+        return qntVendas;
+    }
+    public void setQntVendas(int qntVendas) {
+        this.qntVendas = qntVendas;
+    }
+    
+    public double getValorVendas() {
+        return valorVendas;
+    }
+    public void setValorVendas(double  valorVendas) {
+        this.valorVendas= valorVendas;
+    }
+    
+    
+    @Override
+    public String toString(){
+        return "\nNome: "+nome+ "\nSalario: "+salario+ "\nValor de vendas: "+valorVendas+ "\n Quantidade de vendas: "+qntVendas;
+    }
+}
