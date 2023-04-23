@@ -1,0 +1,17 @@
+
+package Main;
+
+import heranca1.Cachorro;
+import heranca1.Peixe;
+
+public class Main {
+    public static void main(String[] args) {
+
+    Peixe dourado = new Peixe("Nemo",1.0,"Agua doce");
+    Cachorro lorde = new Cachorro("Lorde", 45.0,"Bulldog");    
+        
+    System.out.println(" \nDados do Peixe:\n "+dourado.toString());
+    System.out.println("\nDados do Cachorro:\n "+lorde.toString());
+
+    }  
+}
