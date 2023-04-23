@@ -1,0 +1,21 @@
+
+package Main;
+
+import pessoa.Cliente;
+import pessoa.Vendedor;
+import pessoa.Gerente;
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Cliente Jonas = new Cliente("Jonas",34,"Masculino",35000.0,1989);
+        Vendedor Jonata = new Vendedor("Jonata",22,"masculino",15000.0,"20102964",21000.0,100);
+        Gerente Jon = new Gerente("Jon",42,"masculino",22000.0,"20102964","james");
+        
+        System.out.println("\nDados do cliente: \n"+Jonas.toString());
+        System.out.println("\nDados do Vendedor: \n"+Jonata.toString());
+        System.out.println("\nDados do Gerente: \n"+Jon.toString());
+
+    }
+}
