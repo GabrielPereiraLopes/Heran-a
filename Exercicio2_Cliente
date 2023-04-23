@@ -1,0 +1,34 @@
+
+package pessoa;
+
+
+public class Cliente extends Pessoa {
+    public double ValorDivida;
+    public int AnoNascimento;
+    
+    public Cliente(String nome, int idade, String sexo, double  ValorDivida, int AnoNascimento){
+        super(nome,idade,sexo);
+        this.ValorDivida= ValorDivida;
+        this.AnoNascimento= AnoNascimento;
+    }
+    
+     public double getValorDivida() {
+        return ValorDivida;
+    }
+    public void setValorDivida(double ValorDivida) {
+        this.ValorDivida = ValorDivida;
+    }
+    
+    public int getAnoNascimento() {
+        return AnoNascimento;
+    }
+    public void setAnoNascimento(int AnoNascimento) {
+        this.AnoNascimento = AnoNascimento;
+    }
+    
+    @Override
+    public String toString(){
+        return "\nNome: "+nome+ "\nIdade: "+idade+ "\nSexo: "+sexo+ "\n Valor da Divida: "+ValorDivida+ "\n Ano de nascimento: " +AnoNascimento;
+    }
+    
+}
