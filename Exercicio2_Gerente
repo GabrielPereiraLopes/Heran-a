@@ -11,9 +11,9 @@ public class Gerente extends Empregado {
         this.nomeGerencia= nomeGerencia;
         
     }
-    public double valorInss(double salario, double valorInss){
-        valorInss = (salario * 11) / 100;
-        return valorInss;
+    public double valorInss(double salario){
+       this.valorInss = (super.salario * 11) / 100;
+        return this.valorInss;
     }
     
     public String getNomeGerencia() {
@@ -25,7 +25,7 @@ public class Gerente extends Empregado {
     
     @Override
     public String toString(){
-        return "\nNome: "+nome+ "\nIdade: "+idade+ "\nMatricula: "+matricula+ "\n Nome da gerencia: "+nomeGerencia+ "\n Valor INSS: " +valorInss;
+        return "\nNome: "+nome+ "\nIdade: "+idade+ "\nMatricula: "+matricula+ "\n Nome da gerencia: "+nomeGerencia+ "\n Valor INSS: " +valorInss(super.getSalario());
     }
 }
 
