@@ -1,0 +1,44 @@
+
+package minha_heranca;
+
+
+public class Time extends Jogador {
+    
+    public int qtdreservas;
+    public int qtdpatrocinadores;
+    public String campeonato;
+
+    public Time(String nome, String endereco, String telefone,int gols, int qtdreservas, int qtdpatrocinadores, String campeonato) {
+        super(nome, endereco, telefone, gols);
+        this.campeonato =campeonato ;
+        this.qtdpatrocinadores =qtdpatrocinadores;
+        this.qtdreservas=qtdreservas;
+    }
+      public String gecampeonato() {
+        return campeonato;
+    }
+    public void setcampeonato(String campeonato) {
+        this.campeonato = campeonato;
+    }
+    
+    public int getqtdreservas() {
+        return qtdreservas;
+    }
+    public void setqtdreservas(int qtdreservas) {
+        this.qtdreservas = qtdreservas;
+    }
+    
+    public int getqtdpatrocinadores() {
+        return qtdpatrocinadores;
+    }
+    public void setqtdpatrocinadores(int qtdpatrocinadores) {
+        this.qtdpatrocinadores= qtdpatrocinadores;
+    }  
+       
+     @Override
+    public String toString(){
+        return "\nNome: "+nome+"\nEndereco: "+endereco+ "\nTelefone: "+telefone+ "\nQuantidade de jogadores reservas: "+qtdreservas+"\nQuantidade de patrocinadores: "+qtdpatrocinadores+"\nCampeonato em que joga: "+campeonato+"\nQuantidade de gols no campeonato: "+gols;
+    }
+}    
+    
+    
