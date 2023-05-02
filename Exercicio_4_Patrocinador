@@ -1,0 +1,32 @@
+
+package minha_heranca;
+
+
+public class Patrocinador extends Jogador{
+    public double salario;
+    public double bonus;
+    public double total;
+    
+    public Patrocinador(String nome, String endereco, String telefone,int gols,double salario) {
+        super(nome, endereco, telefone, gols);
+        this.salario = salario;
+    }
+    
+    public double getsalario() {
+        return salario;
+    }
+    public void setsalario(double salario) {
+        this.salario= salario;
+    }  
+    
+     public double calcularSalario(){
+       bonus = this.salario + (((20*this.salario)/100)* gols); 
+        
+        return this.bonus;
+     }
+     
+     @Override
+    public String toString(){
+        return "\nNome: "+nome+"\nEndereco: "+endereco+ "\nTelefone: "+telefone+ "\nGols arrecadados: "+gols+"\nSalario base: "+salario+"\nBolsa total distribuida aos times com o bonus por gol : " +calcularSalario();
+    }
+}
