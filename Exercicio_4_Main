@@ -1,0 +1,21 @@
+
+package Main;
+
+import minha_heranca.Patrocinador;
+import minha_heranca.Time;
+
+public class Main {
+   public static void main(String[] args) {
+
+        Time Flamengo = new Time("Flamengo", "Rio de Janeiro","1333413", 300, 15, 10, "Carioca");
+        Patrocinador MRV = new Patrocinador("MRV", "Rio de Janeiro","1333413", 3000,1000000);
+
+        System.out.println("Dados do Time: "+Flamengo);
+        System.out.println("\nDados do Patrocinador: "+MRV);
+
+       
+        
+        
+        
+    }
+    }
