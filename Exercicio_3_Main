@@ -1,0 +1,26 @@
+
+package Main;
+
+import fabrica.Fornecedor;
+import fabrica.Empregado; 
+import fabrica.Administrador;
+import fabrica.Operario;
+import fabrica.Vendedor;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Fornecedor joao = new Fornecedor("Joao","Arniqueiras","61994160",3000.0,1500.0);
+        Empregado Alex = new Empregado("Alex","Asa sul","61954160",20102964,1500.0,15);
+        Administrador Alexandre = new Administrador("Alexandre","Asa sul","61954980",20102964,1500.0,15,500);
+        Operario jorge = new Operario("Jorge","Samambaia","61954980",2010306564,1500.0,15,2000,10);
+        Vendedor Airton = new Vendedor("Airton","Asa sul","619545980",20102964,1500.0,15,1500,20);
+         
+        System.out.println("Dados do fornecedor: "+joao);
+        System.out.println("\nDados do Empregado: "+Alex);
+        System.out.println("\nDados do Administrador: "+Alexandre);
+        System.out.println("\nDados do Operario: "+jorge);
+        System.out.println("\nDados do Operario: "+Airton);
+
+    }
+}
