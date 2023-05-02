@@ -1,0 +1,48 @@
+
+package fabrica;
+
+
+public class Fornecedor extends Pessoa {
+    public double ValorCredito;
+    public double ValorDivida;
+    public double diferenca;
+   
+    public Fornecedor(String nome, String endereco, String telefone, double ValorCredito, double ValorDivida){
+        super(nome,endereco,telefone);
+        this.ValorCredito = ValorCredito;
+        this.ValorDivida = ValorDivida ;
+    }
+    public double getDiferenca() {
+        return diferenca;
+    }
+    public void setDiferenca(double diferenca) {
+        this.diferenca = diferenca;
+    }
+    
+    
+    public double getValorCredito() {
+        return ValorCredito;
+    }
+    public void setValorCredito(double ValorCredito) {
+        this.ValorCredito = ValorCredito;
+    }
+    
+    public double getValorDivida() {
+        return ValorDivida;
+    }
+    public void setValorDivida(double ValorDivida) {
+        this.ValorDivida = ValorDivida;
+    }
+    
+    public double obterSaldo(){
+        diferenca= this.ValorCredito-this.ValorDivida; 
+        
+        return this.diferenca;
+        
+    }
+    
+    @Override
+    public String toString(){
+        return "\nNome: "+nome+"\nEndereco: "+endereco+ "\nTelefone: "+telefone+ "\nValor de Credito: "+ValorCredito+"\nValor de Divida: "+ValorDivida+"\nValor de diferenca: "+obterSaldo();
+    }
+}
